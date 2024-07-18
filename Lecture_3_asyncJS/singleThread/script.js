@@ -1,11 +1,11 @@
-// let id=setTimeout(()=>{
-//     console.log("Hii")
-// },5000)
+let id=setTimeout(()=>{
+    console.log("Hii")
+},5000)
 
 // clearTimeout(id)
-// setTimeout(()=>{
-//     console.log("Hii1")
-// },5000)
+setTimeout(()=>{
+    console.log("Hii1")
+},5000)
 // for(let i=0;i<10000;i++){
 //     console.log("Stay")
 // }
