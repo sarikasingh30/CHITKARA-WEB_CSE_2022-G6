@@ -25,7 +25,7 @@ app.post("/addtodos", (req, res) => {
       name,
       isCompleted:val
     })
-    res.redirect("/gettodos")
+    res.redirect("/")
 
 });
 app.post("/deletetodos", (req, res) => {
