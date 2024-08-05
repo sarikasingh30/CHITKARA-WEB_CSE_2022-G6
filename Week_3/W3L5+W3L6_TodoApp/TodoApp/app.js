@@ -5,12 +5,12 @@ const path = require("path");
 const PORT = 8080;
 
 app.use(express.urlencoded({ extended: true }));
-//app.use(express.json()); // otherwise Axios request could not be read
+app.use(express.json()); // otherwise Axios request could not be read
 app.use(express.static(path.join(__dirname, "public")));
 
 let todos = [
-  { id: "1", name: "Task-1", isCompleted:true },
-  { id: "2", name: "Task-2", isCompleted:false },
+  { id: "1", name: "Task-1"},
+  { id: "2", name: "Task-2"},
 ];
 app.get("/gettodos", (req, res) => {
   res.send(todos)
@@ -18,14 +18,14 @@ app.get("/gettodos", (req, res) => {
 
 app.post("/addtodos", (req, res) => {
     // const name=req.body.name
-    const {name, isCompleted}=req.body
-    val=isCompleted=="true"? true: false
+    const {name}=req.body
+    // val=isCompleted=="true"? true: false
     todos.push({
       id:uuidv4(),
       name,
-      isCompleted:val
+      // isCompleted:val
     })
-    res.redirect("/")
+    res.redirect("/gettodos")
 
 });
 app.post("/deletetodos", (req, res) => {

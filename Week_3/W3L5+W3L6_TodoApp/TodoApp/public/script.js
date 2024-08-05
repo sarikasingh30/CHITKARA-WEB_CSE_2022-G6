@@ -1,41 +1,64 @@
-const btn = document.querySelector('.btn');
-const newtask = document.querySelector('.newtask');
-const taskList = document.querySelector('.tasklist');
-
-async function getTodos(){
-    try{
-        let {data}=await axios.get("/gettodos")
-        data.forEach((el)=>{
-            let li=document.createElement("li")
-            li.innerHTML=`<span>${el.id} - ${el.name}</span>
-            <div class="btnGroup">
-                <button class="upBtn">↑</button>
-                <button class="downBtn">↓</button>
-                <button class="deleteBtn">❌</button>
-            </div>
-            `
+const btn = document.querySelector(".btn");
+const newtask = document.querySelector(".newtask");
+const taskList = document.querySelector(".tasklist");
+// const deleteBtn=document.querySelector(".deleteBtn")
 
 
-
-            li.classList.add("item")
-            taskList.appendChild(li)
-        })
+taskList.addEventListener("click", async(ev)=>{
+    console.log(ev.target.classList.value)
+    let taskID=ev.target.getAttribute("atrid")
+    if(ev.target.classList.value=="deleteBtn"){
+        try {
+            let {data}=await axios.post("/deletetodos",{id:taskID})
+            mapTodo(data)
+        } catch (error) {
+            console.log(error)
+        }
     }
-    catch(err){
-        console.log(err)
+})
+
+
+
+btn.addEventListener("click", async (ev) => {
+  try {
+    ev.preventDefault();
+    let tvalue = newtask.value;
+    if (tvalue) {
+      let { data } = await axios.post("/addtodos", { name: tvalue });
+      mapTodo(data);
+      newtask.value = "";
+    } else {
+      alert("Fill the detail");
     }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+async function getTodos() {
+  try {
+    let { data } = await axios.get("/gettodos");
+    mapTodo(data);
+  } catch (err) {
+    console.log(err);
+  }
 }
-getTodos()
+getTodos();
 
-// btn.addEventListener("click",(e)=>{
-//     e.preventDefault()
-//     try{
-//         let taskName=newtask.value
-//         axios.post("/addtodos",{
+function mapTodo(data) {
+  taskList.innerHTML = "";
+  data.forEach((el) => {
+    let li = document.createElement("li");
+    li.innerHTML = `<span>${el.id} - ${el.name}</span>
+              <div class="btnGroup">
+                  <button class="upBtn" atrid=${el.id}>↑</button>
+                  <button class="downBtn" atrid=${el.id}>↓</button>
+                  <button class="deleteBtn" atrid=${el.id}>❌</button>
+              </div>
+              `;
+    li.classList.add("item");
+    taskList.appendChild(li);
+  });
+}
 
 
-//         })
-//     }catch(err){
-
-//     }
-// })
