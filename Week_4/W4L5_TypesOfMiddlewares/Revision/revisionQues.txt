@@ -1,0 +1,307 @@
+What is npm primarily used for?
+
+A) Managing Node.js versions
+B) Managing packages for JavaScript
+C) Debugging Node.js applications
+D) Creating JavaScript applications
+
+Which of the following commands initializes a new project setup?
+
+A) npm start
+B) npm init
+C) npm install
+D) npm run
+
+Where is the list of dependencies for an npm package stored?
+
+A) index.js
+B) package.json
+C) npm.config
+D) dependencies.json
+
+How do you install a package globally using npm?
+
+A) npm install package
+B) npm install package --global
+C) npm install package -g
+D) Both B and C
+
+Which file contains the metadata for an npm package?
+
+A) package.json
+B) npm.config
+C) metadata.json
+D) node_modules.json
+
+Which command is used to install all dependencies listed in package.json?
+
+A) npm install
+B) npm update
+C) npm start
+D) npm run
+
+How do you uninstall a package using npm?
+
+A) npm remove package
+B) npm delete package
+C) npm uninstall package
+D) npm erase package
+
+
+What is the purpose of the node_modules folder?
+
+A) To store JavaScript files
+B) To store all installed npm packages
+C) To store the main application code
+D) To store npm configuration files
+
+
+
+
+What does the ^ symbol in a version number indicate in package.json?
+
+A) Install the exact version 
+B) Install the latest version
+C) Install the latest minor version
+D) Install any version within the same major version
+
+How can you create a package-lock.json file?
+
+A) Automatically created when running npm install
+B) Manually create the file
+C) Use the command npm create-lock
+D) Use the command npm lock
+
+What is a server in the context of Node.js?
+
+A) A tool for managing databases
+B) A module that handles HTTP requests and responses
+C) A front-end library
+D) A Node.js package manager
+
+Which Node.js module is used to create a server?
+
+A) fs
+B) http
+C) path
+D) os
+
+How do you create a basic HTTP server in Node.js?
+
+A) http.createServer()
+B) fs.createServer()
+C) net.createServer()
+D) server.createHttp()
+
+Which method is used to listen for incoming connections on a specific port?
+
+A) server.start()
+B) server.listen()
+C) server.connect()
+D) server.run()
+
+How do you send a response back to the client in Node.js?
+
+A) response.write()
+B) response.send()
+C) response.sendFile()
+D) response.end()
+
+Which method is used to send data to the client in chunks?
+
+A) response.send()
+B) response.write()
+C) response.end()
+D) response.chunk()
+
+What does the req object represent in a Node.js server?
+
+A) The server itself
+B) The response object
+C) The request object containing information about the HTTP request
+D) The file system module
+
+
+What does res.statusCode do in a Node.js server?
+
+A) Sets the HTTP status code of the response
+B) Sends the response to the client
+C) Ends the response process
+D) Returns the status of the request
+
+How do you handle POST data in a Node.js server?
+
+A) Using req.body
+B) Using req.data
+C) Using req.postData
+D) Using req.json()
+
+Which module is typically used to parse incoming request bodies in a Node.js server?
+
+A) querystring
+B) body-parser or Express.json() middleware
+C) url
+D) path
+
+How can you serve static files in a Node.js server?
+
+A) Using express.static()
+B) Using http.static()
+C) Using fs.static()
+D) Using path.static()
+
+Which HTTP method is used to retrieve data from a server?
+
+A) POST
+B) PUT
+C) DELETE
+D) GET
+
+Which HTTP method is used to send data to a server for processing?
+
+A) GET
+B) POST
+C) DELETE
+D) PATCH
+
+What does req.url represent in a Node.js server?
+
+A) The base URL of the server
+B) The URL path of the incoming request
+C) The full URL of the client's request
+D) The protocol used by the client
+
+Which method is used to redirect a client to a different URL in a Node.js server?
+
+A) res.redirect()
+B) res.sendRedirect()
+C) res.forward()
+D) res.goto()
+
+How do you handle different routes in a Node.js server?
+
+A) Using if statements
+B) Using switch statements
+C) Using the express.Router() function
+D) Using the http.Router() function
+
+What does the next function do in Express middleware?
+
+A) Terminates the request-response cycle
+B) Passes control to the next middleware function
+C) Sends the response to the client
+D) Restarts the server
+
+
+Which of the following is a built-in module in Node.js for handling HTTP requests?
+
+A) http
+B) express
+C) koa
+D) request
+
+How do you handle errors in a Node.js server?
+
+A) Using a global error handler
+B) Using the try...catch block
+C) Using error-handling middleware
+D) All of the above
+
+Which command is used to start a Node.js server?
+
+A) node server.js
+B) npm start
+C) nodemon start
+D) node app.js
+
+
+What is Node.js?
+
+A) A client-side JavaScript framework
+B) A server-side runtime environment for JavaScript
+C) A database management system
+D) A front-end JavaScript library
+
+Which of the following is true about Node.js?
+
+A) It is single-threaded
+B) It is multi-threaded
+C) It can only run in a browser
+D) It does not support asynchronous operations
+
+Which programming language does Node.js use?
+
+A) Java
+B) C++
+C) Python
+D) JavaScript
+
+What module is required to create a server in Node.js?
+
+A) http
+B) fs
+C) net
+D) url
+
+Which method is used to read a file asynchronously in Node.js?
+
+A) fs.readFileSync()
+B) fs.readFile()
+C) fs.openFile()
+D) fs.getFile()
+
+Which of the following is a core module in Node.js?
+
+A) axios
+B) http
+C) express
+D) lodash
+
+Which engine does Node.js use to execute JavaScript code?
+
+A) SpiderMonkey
+B) Chakra
+C) V8
+D) JavaScriptCore
+
+Which module is used to work with file systems in Node.js?
+
+A) http
+B) fs
+C) path
+D) url
+
+What is the primary role of a client in a client-server architecture?
+
+A) To provide resources
+B) To request services from a server
+C) To manage the server's operations
+D) To handle database transactions
+
+What does a server do in a client-server architecture?
+
+A) Sends requests to clients
+B) Provides services or resources to clients
+C) Manages the client’s local files
+D) Executes client-side scripts
+
+Which of the following is an example of a client-server application?
+
+A) Web browsers and web servers
+B) File systems
+C) Desktop applications
+D) Database tables
+
+In a client-server model, which component typically initiates communication?
+
+A) Server
+B) Client
+C) Middleware
+D) Database
+
+What is the purpose of the HTTP response status code 200?
+
+A) Request not found
+B) Unauthorized access
+C) OK (successful request)
+D) Internal server error
