@@ -1,0 +1,15 @@
+[
+  { "id": "1", "name": "Sam", "email": "sam@b.com", "password": "1234" },
+  {
+    "id": "afde953c-1110-4819-b3a3-e479abea9fe5",
+    "name": "Bunny",
+    "email": "bunny@b.com",
+    "password": "987654321"
+  },
+  {
+    "id": "b7448ec5-3b93-4faa-b8de-af15070d3d28",
+    "name": "sunny",
+    "email": "sunny@b.com",
+    "password": "232323"
+  }
+]
